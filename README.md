@@ -24,7 +24,6 @@ A brief description of what this project does and who it's for. Explain the prob
     - [Manual Deployment](#manual-deployment)
   - [Contributing](#contributing)
   - [License](#license)
-  - [Contact](#contact)
 
 ## Features
 
@@ -211,8 +210,3 @@ Explain how others can contribute to your project:
 ## License
 
 This project is licensed under the [LICENSE NAME] - see the LICENSE file for details.
-
-## Contact
-
-- Your Name - [your.email@example.com](mailto:your.email@example.com)
-- Project Link: [https://github.com/username/project-name](https://github.com/username/project-name)
