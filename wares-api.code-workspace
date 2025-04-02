@@ -1,10 +1,10 @@
 {
   "folders": [
     {
-      "path": "Api/wares-api"
+      "path": "wares-api"
     },
     {
-      "path": "App/wares-app"
+      "path": "wares-app"
     }
   ]
 }
