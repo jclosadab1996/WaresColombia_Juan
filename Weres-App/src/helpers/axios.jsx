@@ -1,21 +1,16 @@
-import axios from 'axios';
-import { urlAPI, configTokenAXI, configTokenAXIFormData } from './utils';
+import axios from "axios";
+import { urlAPI, configTokenAXI, configTokenAXIFormData } from "./utils";
 
 const instance = axios.create({
   baseURL: urlAPI,
   headers: {
-    'content-type': 'application/json',
+    "content-type": "application/json",
   },
 });
 
-const showSpinner = () => {
-  const spinnerContainer = document.getElementById('spinner-container');
-  if (spinnerContainer) spinnerContainer.style.display = 'block';
-};
-
 const hideSpinner = () => {
-  const spinnerContainer = document.getElementById('spinner-container');
-  if (spinnerContainer) spinnerContainer.style.display = 'none';
+  const spinnerContainer = document.getElementById("spinner-container");
+  if (spinnerContainer) spinnerContainer.style.display = "none";
 };
 
 instance.interceptors.request.use(
@@ -40,25 +35,25 @@ instance.interceptors.response.use(
 export default {
   get: (url) =>
     instance({
-      method: 'GET',
+      method: "GET",
       url,
       headers: configTokenAXI,
     }),
 
   silentGet: (url, params = {}) =>
     instance({
-      method: 'GET',
+      method: "GET",
       url,
       params,
       headers: {
         ...configTokenAXI,
-        'X-Silent-Request': 'true',
+        "X-Silent-Request": "true",
       },
     }),
 
   silenceGet: (url, silent = false) =>
     instance({
-      method: 'GET',
+      method: "GET",
       url,
       headers: configTokenAXI,
       data: { silent },
@@ -66,7 +61,7 @@ export default {
 
   post: (url, params = {}) =>
     instance({
-      method: 'POST',
+      method: "POST",
       url,
       data: params,
       headers: configTokenAXI,
@@ -74,7 +69,7 @@ export default {
 
   postFormData: (url, params = {}) =>
     instance({
-      method: 'POST',
+      method: "POST",
       url,
       data: params,
       headers: configTokenAXIFormData,
@@ -82,7 +77,7 @@ export default {
 
   patch: (url, params = {}) =>
     instance({
-      method: 'PATCH',
+      method: "PATCH",
       url,
       data: params,
       headers: configTokenAXI,
@@ -90,14 +85,14 @@ export default {
 
   post_public: (url, params = {}) =>
     instance({
-      method: 'POST',
+      method: "POST",
       url,
       data: params,
     }),
 
   delete: (url) =>
     instance({
-      method: 'DELETE',
+      method: "DELETE",
       url,
       headers: configTokenAXI,
     }),

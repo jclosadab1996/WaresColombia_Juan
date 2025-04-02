@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import List from './pages/List'; // Fixed import path
-import './index.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import List from "./pages/List"; // Fixed import path
+import "./index.css";
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -15,17 +15,17 @@ const queryClient = new QueryClient({
 
 function App() {
   return (
-        <QueryClientProvider client={queryClient}>
-            <Router>
-                <Routes>
-                <Route path="/" element={<List />} />
-                {/* <Route path="/users/create" element={<UserForm />} />
+    <QueryClientProvider client={queryClient}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<List />} />
+          {/* <Route path="/users/create" element={<UserForm />} />
                 <Route path="/users/edit/:id" element={<UserForm />} />
                 <Route path="/users/:id" element={<UserDetail />} /> */}
-            </Routes>
-        </Router>
-        </QueryClientProvider>
-);
+        </Routes>
+      </Router>
+    </QueryClientProvider>
+  );
 }
 
 export default App;

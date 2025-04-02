@@ -2,7 +2,7 @@
 import express from "express";
 
 // Importa las rutas definidas para los tipos de usuario. Este módulo contiene todas las rutas relacionadas con operaciones CRUD para tipos de usuario
-import userTypesRoutes from "./routes/userType.routes.js";
+import user_TypesRoutes from "./routes/user_type.routes.js";
 
 // Importa las rutas definidas para los usuarios. Este módulo contiene todas las rutas relacionadas con operaciones CRUD para usuarios
 import userRoutes from "./routes/user.routes.js";
@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(cors());
 
 // Agrega las rutas de tipos de usuario a la aplicación. Todas las rutas definidas en userTypesRoutes ahora son parte de la aplicación. Nota: Aquí no se define un prefijo, por lo que se usarán las rutas exactas definidas en el módulo
-app.use(userTypesRoutes);
+app.use(user_TypesRoutes);
 
 // Agrega las rutas de usuarios a la aplicación. Todas las rutas definidas en userRoutes ahora son parte de la aplicación. Nota: Aquí no se define un prefijo, por lo que se usarán las rutas exactas definidas en el módulo
 app.use(userRoutes);
@@ -38,7 +38,7 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
 
   // Envía una respuesta de error genérica al cliente con código de estado 500 (Error Interno del Servidor)
-  res.status(500).send("Algo salió mal!");
+  res.status(500).send("Something went wrong!");
 });
 
 // Exporta la aplicación Express configurada. Esto permite importar la aplicación en otros archivos, por ejemplo, para iniciarla en server.js

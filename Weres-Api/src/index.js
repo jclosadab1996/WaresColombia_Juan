@@ -20,7 +20,7 @@ async function main() {
     app.listen(3000, () => {
       // Este callback se ejecuta cuando el servidor ha iniciado correctamente
       // Registra un mensaje en la consola indicando que el servidor está funcionando
-      console.log("Server listening on port 4000");
+      console.log("Server listening on port 3000");
     });
   } catch (error) {
     // Si ocurre algún error durante la conexión a la base de datos,
